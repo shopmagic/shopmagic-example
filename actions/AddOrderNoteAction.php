@@ -59,7 +59,6 @@ final class AddOrderNoteAction extends BasicAction {
 			( new TextAreaField() )
 				->set_label( __( 'Note', 'shopmagic-example' ) )
 				->set_name( self::PARAM_NOTE )
-				->set_required(),
 		];
 	}
 
