@@ -2,7 +2,7 @@
 
 namespace ShopMagicExample;
 
-use WPDesk\ShopMagic\Placeholder\Builtin\WooCommerceOrderBasedPlaceholder;
+use WPDesk\ShopMagic\Workflow\Placeholder\Builtin\WooCommerceOrderBasedPlaceholder;
 
 class OrderNumberPlaceholder extends WooCommerceOrderBasedPlaceholder {
 
@@ -13,8 +13,8 @@ class OrderNumberPlaceholder extends WooCommerceOrderBasedPlaceholder {
 	 *
 	 * @return string
 	 */
-	public function get_slug() {
-		return parent::get_slug() . '.number';
+	public function get_slug(): string {
+		return 'number';
 	}
 
 	/**
@@ -26,7 +26,18 @@ class OrderNumberPlaceholder extends WooCommerceOrderBasedPlaceholder {
 	 *
 	 * @return string
 	 */
-	public function value( array $parameters ) {
-		return $this->is_order_provided() ? $this->get_order()->get_order_number() : '';
+	public function value( array $parameters ): string {
+		if ( $this->resources->has( \WC_Order::class ) ) {
+			$order = $this->resources->get( \WC_Order::class );
+
+			return $order->get_order_number();
+		}
+
+		return '';
+	}
+
+	public function get_description(): string {
+		return __( 'Display order number. Defaults to order ID, but plugins for sequential order number can override this value.',
+			'shopmagic-example' );
 	}
 }

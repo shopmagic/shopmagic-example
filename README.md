@@ -19,4 +19,4 @@ We included 4 basic examples:
 
 We think these examples will give you a very good overview of extending ShopMagic to your needs. The code is in most cases self explanatory and we also provided some inline comments to help you understand how these things work.
 
-However if you run into any issues or have questions, [please let us know](https://shopmagic.app/support/) and we will be happy to help.
+However, if you run into any issues or have questions, [please let us know](https://shopmagic.app/support/) and we will be happy to help.
