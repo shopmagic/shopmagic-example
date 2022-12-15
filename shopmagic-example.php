@@ -3,17 +3,17 @@
  * Plugin Name: ShopMagic Example
  * Plugin URI: https://docs.shopmagic.app/collection/159-developer-docs?utm_source=shopmagic-example&utm_medium=plugin&utm_campaign=for-developers&utm_term=plugin-uri&utm_content=docs
  * Description: Example ShopMagic plugin to show how to add custom events, filters, actions and placeholders.
- * Version: 1.0.2
+ * Version: 2.0.0
  * Author: WP Desk
  * Author URI: https://shopmagic.app/
  * Text Domain: shopmagic-example
  * Domain Path: /languages/
- * Requires at least: 4.9
- * Tested up to: 5.7
+ * Requires at least: 5.0
+ * Tested up to: 6.1
  * WC requires at least: 4.2
- * WC tested up to: 5.1
- * Requires PHP: 7.0
- * Copyright 2020 WP Desk Ltd
+ * WC tested up to: 7.2
+ * Requires PHP: 7.2
+ * Copyright 2022 WP Desk Ltd
  **/
 
 add_filter( 'shopmagic/core/events', 'shopmagic_add_custom_events' );
